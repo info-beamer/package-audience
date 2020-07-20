@@ -1,0 +1,14 @@
+{
+    "name": "Audience detection",
+    "author": "Florian Wesch <fw@info-beamer.com>",
+    "desc": "On-device face detection demo package",
+    "platforms": ["pi/v7", "pi/v8"],
+    "offline": {
+        "support": "yes",
+        "info": "No internet connection required for detection"
+    },
+    "nesting": {
+        "parents": "any",
+        "childs": []
+    }
+}

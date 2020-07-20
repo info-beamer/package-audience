@@ -1,0 +1,31 @@
+{
+    "name": "Detector",
+    "options": [{
+        "title": "Camera resolution",
+        "ui_width": 4,
+        "name": "resolution",
+        "type": "select",
+        "options": [
+            [{"x": 128, "y": 96}, "128x96 (fastest)"],
+            [{"x": 256, "y": 192}, "256x192 (default)"],
+            [{"x": 512, "y": 384}, "512x384"]
+        ],
+        "default": {"x": 256, "y": 192}
+    }, {
+        "title": "Vertical flip",
+        "ui_width": 2,
+        "name": "vflip",
+        "type": "boolean",
+        "default": true
+    }, {
+        "title": "On face trigger event",
+        "ui_width": 6,
+        "name": "trigger",
+        "type": "string",
+        "placeholder": "/faces:",
+        "default": ""
+    }],
+    "permissions": {
+        "vchiq": "Needs access to camera"
+    }
+}

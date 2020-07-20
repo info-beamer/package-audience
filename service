@@ -1,0 +1,24 @@
+#!/usr/bin/python
+from face_detect import Detector
+from hosted import Node, node, config
+
+config.restart_on_update()
+
+def main():
+    root = Node('root')
+    rpc = root.rpc()
+    det = Detector(
+        config.resolution['x'],
+        config.resolution['y'],
+    )
+    for faces in det.cam_loop(
+        show_preview = node.is_top_level,
+        vflip = config.vflip,
+    ):
+        rpc.faces(faces)
+        root.send('/face-detect:%d' % len(faces))
+        if config.trigger and faces:
+            root.send(config.trigger)
+
+if __name__ == "__main__":
+    main()
