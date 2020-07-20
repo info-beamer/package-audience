@@ -1,3 +1,5 @@
+[![Import](https://cdn.infobeamer.com/s/img/import.png)](https://info-beamer.com/use?url=https://github.com/info-beamer/package-audience)
+
 # A face detection example for info-beamer hosted
 
 This package implements a face detector using a connected
